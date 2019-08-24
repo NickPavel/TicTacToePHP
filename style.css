@@ -48,3 +48,11 @@ input[type=submit].grid {
 	cursor: pointer;
 	border: 0px;
 }
+a:link {
+	text-decoration: none;
+	color: blue;
+}
+a:visited {
+	text-decoration: none;
+	color: blue;
+}
