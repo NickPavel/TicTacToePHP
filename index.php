@@ -48,7 +48,7 @@
 			<footer>
 				<br>
 				<hr>
-				<p>HTML, CSS, PHP</p>
+				<p><a href="https://github.com/NickPavel/TicTacToePHP">HTML, CSS, PHP</a></p>
 			</footer>
 		</fieldset>
 	</body>
