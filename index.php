@@ -1,4 +1,4 @@
-<?php require('functions.php'); ?>
+<?php require('script.php'); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,6 +9,37 @@
 		<title>TicTacToe2</title>
 	</head>
 	<body>
+		<div class="top">
+			<div class="one">Score:&nbsp;&nbsp;</div>
+			<div class="one">X = <?= $_SESSION['xpoints'] ?>,&nbsp;&nbsp;</div>
+			<div class="one">O = <?= $_SESSION['opoints'] ?>,&nbsp;&nbsp;</div>
+			<div class="one">Ties = <?= $_SESSION['tiepoints'] ?></div>
+		</div>
+		<div class="top">
+			<div class="one">
+				<form method="post" action="./">
+					<input type="hidden" name="reset" value="7">
+					<input class="two" type="submit" value="Reset">
+				</form>
+			</div>
+			<div class="one">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<div class="one">
+				<form method="post" action="./">
+					<input type="hidden" name="switch" value="7">
+					<input class="two" type="submit" value="Switch Turns: <?= $_SESSION['switch'] ?>">
+				</form>
+			</div>
+		</div>
+<?php if ($_SESSION['switch'] == 'No') { ?>
+		<div class="top">
+			<div class="one">
+				<form method="post" action="./">
+					<input type="hidden" name="start" value="7">
+					<input class="two" type="submit" value="Play <?= $_SESSION['start'] ?>">
+				</form>
+			</div>
+		</div>
+<?php } ?>
 		<fieldset>
 			<header>
 				<br>
@@ -19,6 +50,8 @@
 			</header>
 <?php if ($win == 'T') echo '<h2>'.$array[$winner[0]].' wins!</h2><br>'; ?>
 <?php if ($tie == 'T') echo '<h2>It\'s a tie!</h2><br>'; ?>
+			<p>X = Player, O = Computer</p>
+			<br>
 			<table>
 <?php for ($i = 0; $i <= 8; $i++) {
 	if ($i % 3 == 0) { ?>
@@ -41,7 +74,7 @@
 <?php if (($tie == 'T') || ($win == 'T')) { ?>
 			<br>
 			<form method="post" action="./">
-				<input type="hidden" name="new" value="new">
+				<input type="hidden" name="new" value="7">
 				<input type="submit" value="NEW GAME">
 			</form>
 <?php } ?>
