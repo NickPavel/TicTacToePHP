@@ -1,9 +1,19 @@
 * {
 	margin: 0;
 	border: 0;
+	text-align: center;
 }
 body {
 	background-color: rgb(77, 77, 77);
+}
+.top {
+	color: rgb(204, 204, 204);
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.one {
+	padding: 0px;
+	display: inline-block;
 }
 fieldset {
 	background-color: rgb(204, 204, 204);
@@ -12,7 +22,6 @@ fieldset {
 	margin-right: 10px;
 	margin-top: 10px;
 	padding: 0px;
-	text-align: center;
 }
 hr {
 	border: 1px solid black;
@@ -48,6 +57,42 @@ input[type=submit].grid {
 	cursor: pointer;
 	border: 0px;
 }
+input[type=submit].two {
+	cursor: pointer;
+	border: 0px;
+	background-color: rgb(77, 77, 77);
+	color: rgb(204, 204, 204);
+}
+input[value=Reset].two {
+	font-family: serif;
+	font-weight: normal;
+	font-size: 1em;
+	color: yellow;
+}
+input[value="Switch Turns: Yes"].two {
+	font-family: serif;
+	font-weight: normal;
+	font-size: 1em;
+	color: yellow;
+}
+input[value="Switch Turns: No"].two {
+	font-family: serif;
+	font-weight: normal;
+	font-size: 1em;
+	color: yellow;
+}
+input[value="Play First"].two {
+	font-family: serif;
+	font-weight: normal;
+	font-size: 1em;
+	color: yellow;
+}
+input[value="Play Second"].two {
+	font-family: serif;
+	font-weight: normal;
+	font-size: 1em;
+	color: yellow;
+}
 a:link {
 	text-decoration: none;
 	color: blue;
@@ -56,3 +101,4 @@ a:visited {
 	text-decoration: none;
 	color: blue;
 }
+
